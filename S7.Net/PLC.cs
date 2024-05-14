@@ -194,6 +194,7 @@ namespace S7.Net
                 if (tcpClient.Connected) tcpClient.Close();
                 tcpClient = null; // Can not reuse TcpClient once connection gets closed.
             }
+            _stream = null;
         }
 
         private void AssertPduSizeForRead(ICollection<DataItem> dataItems)
